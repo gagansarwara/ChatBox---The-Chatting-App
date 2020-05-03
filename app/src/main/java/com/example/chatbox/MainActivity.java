@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 if((dataSnapshot.child("name").exists()))   // If name is already present for Current UID
                 {
-                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
                 }
                 else                                // Else screen will move to Settings Activity
                 {
