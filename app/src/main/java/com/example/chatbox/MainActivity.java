@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(item.getItemId() == R.id.main_find_friends_option)
         {
-
+            SendUserToFindFriendsActivity();
         }
             return true;
     }
@@ -211,5 +211,12 @@ public class MainActivity extends AppCompatActivity {
         settingsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);  //prevents user going to previous activity on back press
         startActivity(settingsIntent);
         finish();
+    }
+
+    private void SendUserToFindFriendsActivity()
+    {
+        Intent FindFriendsIntent = new Intent(MainActivity.this , FindFriendsActivity.class);
+        startActivity(FindFriendsIntent);
+
     }
 }
