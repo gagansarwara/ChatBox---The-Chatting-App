@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".ChatActivity">
+
+    <include
+        android:id="@+id/chat_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/private_messages_list_of_users"
@@ -14,11 +19,6 @@
         android:layout_below="@+id/chat_toolbar"
         android:layout_above="@+id/chat_linear_layout"
         android:layout_marginBottom="6dp" />
-
-    <include
-        android:id="@+id/chat_toolbar"
-        layout="@layout/app_bar_layout">
-    </include>
 
 
     <RelativeLayout
@@ -36,7 +36,6 @@
             android:id="@+id/send_files_btn"
             android:layout_width="60dp"
             android:layout_height="50dp"
-            android:src="@drawable/send_message"
             android:layout_alignParentStart="true"
             android:backgroundTint="@android:color/white"
             />
@@ -64,6 +63,5 @@
             />
 
     </RelativeLayout>
-
 
 </RelativeLayout>
